@@ -1,0 +1,125 @@
+:root {
+  --colors-primary_light-cyan: hsl(193, 38%, 86%);
+  --colors-primary_neon-green: hsl(150, 100%, 66%);
+
+  --colors-neutral_grayish-blue: hsl(217, 19%, 38%);
+  --colors-neutral_dark-grayish-blue: hsl(217, 19%, 24%);
+  --colors-neutral_dark-blue: hsl(218, 23%, 16%);
+}
+
+@font-face {
+  font-family: "Manrope";
+  src: url("../../../public/fonts/Manrope-VariableFont_wght.ttf");
+}
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-weight: 800;
+  font-family: Manrope;
+  letter-spacing: 0.1rem;
+}
+
+button {
+  border: none;
+  cursor: pointer;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+html, body, #app {
+  min-height: 100vh;
+}
+
+#app {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--colors-neutral_dark-blue);
+  padding: 0 2rem;
+  gap: 6rem;
+}
+
+main {
+  width: 100%;
+  max-width: 540px;
+  padding: 4rem 4rem 0 4rem;
+  border-radius: 20px;
+  background-color: var(--colors-neutral_dark-grayish-blue);
+}
+
+main .content {
+  text-align: center;
+}
+
+main .content h1 {
+  color: var(--colors-primary_neon-green);
+  font-size: clamp(1.4rem, 2.5vw + 0.1rem, 1.8rem);
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+main .content p {
+  color: var(--colors-primary_light-cyan);
+  font-size: clamp(1.6rem, 5vw + 0.1rem, 2.8rem);
+  padding: 4rem 0;
+}
+
+main .content p::before {
+  content: "“";
+}
+
+main .content p::after {
+  content: "”";
+}
+
+main .divider {
+  width: 100%;
+  object-fit: cover;
+}
+
+main .circle_wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+main .circle_wrapper .circle{
+  display: flex;
+  justify-content: center;
+  position: relative;
+  align-items: center;
+  top: 25px;
+  width: 65px;
+  height: 65px;
+  background-color: var(--colors-primary_neon-green);
+  border-radius: 50%;
+}
+
+main .circle_wrapper .circle:hover{
+  filter: drop-shadow(0px 0px 12px var(--colors-primary_neon-green)) brightness(1.5);
+}
+
+p:focus-visible,
+main .circle_wrapper .circle:focus-visible,
+main .content h1:focus-visible,
+a:focus-visible {
+  outline-color: var(--colors-neutral_grayish-blue);
+  outline-offset: 1px;
+  outline-style: dashed;
+  outline-width: 2px;
+}
+
+/* Defaults */
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  color: var(--colors-primary_light-cyan);
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
