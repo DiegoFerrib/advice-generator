@@ -116,10 +116,10 @@ a:focus-visible {
 
 /* Defaults */
 .attribution {
-  font-size: 11px;
+  font-size: clamp(1.2rem, 2.5vw + 0.1rem, 1.6rem);
   text-align: center;
   color: var(--colors-primary_light-cyan);
 }
 .attribution a {
-  color: hsl(228, 45%, 44%);
+  color: hsl(192, 27%, 50%);
 }
